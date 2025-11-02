@@ -17,6 +17,8 @@ function changePiece(element) {
         
         // 選択されたマスにハイライトなどの視覚的な変化を適用（CSSファイルが必要）
         element.classList.add('selected');
+        element.style.borderWidth="15px"
+        
         
         console.log(`駒を選択: ${selectedPiece} from ${element.id}`);
 
@@ -45,10 +47,10 @@ function changePiece(element) {
         
         // 選択状態をリセット
         selectedSquare.classList.remove('selected');
+
+        console.log(`駒を移動: ${selectedPiece} to ${element.id}`);
         selectedPiece = null;
         selectedSquare = null;
-        
-        console.log(`駒を移動: ${selectedPiece} to ${element.id}`);
     }
 }
 //初期化ないけどなんか更新したら戻った(笑)
