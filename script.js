@@ -16,8 +16,7 @@ function changePiece(element) {
         selectedSquare = element;
         
         // 選択されたマスにハイライトなどの視覚的な変化を適用（CSSファイルが必要）
-        element.classList.add('selected');
-        element.style.borderWidth="15px"
+        element.classList.add('selected');/*色変更*/
         element.style.backgroundColor="#330000"
         
         console.log(`駒を選択: ${selectedPiece} from ${element.id}`);
@@ -46,8 +45,7 @@ function changePiece(element) {
         selectedSquare.innerHTML = '';
         
         // 選択状態をリセット
-        element.style.borderWidth="5px"
-        element.style.backgroundColor="#ffffff"
+        element.style.backgroundColor="#ffffff"/*色を戻す*/
         selectedSquare.classList.remove('selected');
         selectedPiece = null;
         selectedSquare = null;
