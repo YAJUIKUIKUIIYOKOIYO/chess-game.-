@@ -45,12 +45,12 @@ function changePiece(element) {
         selectedSquare.innerHTML = '';
         
         // 選択状態をリセット
-        element.style.backgroundColor="#ffffff"/*色を戻す*/
+        console.log(`駒を移動: ${selectedPiece} to ${element.id}`);
+        selectedSquare.style.backgroundColor="#ffffff"/*色を戻す*/
         selectedSquare.classList.remove('selected');
         selectedPiece = null;
         selectedSquare = null;
         
-        console.log(`駒を移動: ${selectedPiece} to ${element.id}`);
     }
 }
 //初期化ないけどなんか更新したら戻った(笑)
