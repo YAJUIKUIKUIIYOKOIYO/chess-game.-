@@ -17,7 +17,7 @@ function changePiece(element) {
         
         // 選択されたマスにハイライトなどの視覚的な変化を適用（CSSファイルが必要）
         element.classList.add('selected');/*色変更*/
-        element.style.backgroundColor="#330000"
+        element.style.backgroundColor="#ff0000"
         
         console.log(`駒を選択: ${selectedPiece} from ${element.id}`);
 
