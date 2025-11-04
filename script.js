@@ -19,7 +19,7 @@ function changePiece(element) {
         element.classList.add('selected');/*色変更*/
         element.style.backgroundColor="#ff0000"
         
-        console.log(`駒を選択: ${selectedPiece} from ${element.id}`);
+        alert(`駒を選択: ${selectedPiece} from ${element.id}`);
 
     // 2. 駒が選択されている場合 
     } else {
@@ -28,14 +28,14 @@ function changePiece(element) {
             selectedSquare.classList.remove('selected');
             selectedPiece = null;
             selectedSquare = null;
-            console.log("選択解除しました");
+            alert("選択解除しました");
             return;
         }
 
         // 相手の駒があるマスをクリックした場合
         if (piece !== '') {
              // 実際には、駒の種類や色による複雑な判定が必要　重要
-             console.log(`駒を取ります: ${piece} at ${element.id}`);
+             alert(`駒を取ります: ${piece} at ${element.id}`);
         }
         
         // 選択された駒を新しいマスに配置 (innerHTMLの書き換え)
@@ -45,7 +45,7 @@ function changePiece(element) {
         selectedSquare.innerHTML = '';
         
         // 選択状態をリセット
-        console.log(`駒を移動: ${selectedPiece} to ${element.id}`);
+        alert(`駒を移動: ${selectedPiece} to ${element.id}`);
         selectedSquare.style.backgroundColor="#ffffff"/*色を戻す*/
         selectedSquare.classList.remove('selected');
         selectedPiece = null;
