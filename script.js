@@ -26,6 +26,7 @@ function changePiece(element) {
         // 選択中のマスを再度クリックした場合、選択解除する
         if (element === selectedSquare) {
             selectedSquare.classList.remove('selected');
+            selectedSquare.style.backgroundColor="#ffffff"/*色を戻す*/
             selectedPiece = null;
             selectedSquare = null;
             alert("選択解除しました");
